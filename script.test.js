@@ -1,9 +1,8 @@
-import { capitalize, reverseString, calc } from "./script";
+import { capitalize, reverseString, calc, caeserCipher } from "./script";
 
 test('nasus should be Nasus', () => {
  expect(capitalize('nasus')).toBe('Nasus')
 })
-
 
 test('sadfdsafdsfa should be Sadfdsafdsfa', () => {
  expect(capitalize('sadfdsafdsfa')).toBe('Sadfdsafdsfa')
@@ -59,4 +58,8 @@ test('5 / 2 should be 2.5', () => {
 
 test('0 / 8 should be 0', () => {
  expect(calc.divide(0, 8)).toBe(0)
+})
+
+test('hellohi, 3 should be khoorkl', () => {
+ expect(caeserCipher('hellohi', 3)).toBe('khoorkl')
 })

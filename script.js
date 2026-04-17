@@ -47,3 +47,32 @@ export const calc = {
     },
 }
 
+
+export function caeserCipher(str, key){
+    const convertedString = str.split('')
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    const arrayAlphabet = alphabet.split('');
+    const cipheredArrayString = [];
+
+    for(let i = 0; i <= convertedString.length - 1; i++){
+        console.log(i);
+        for(let j = 0; j <= arrayAlphabet.length - 1; j++ ){
+            console.log(j);
+            if(convertedString[i] === arrayAlphabet[j]){
+                let shift = j + key
+                console.log(`shift index: ${j + key}`);
+                if(shift > arrayAlphabet.length - 1){
+                    shift = shift - arrayAlphabet.length;
+                }
+                cipheredArrayString.push(convertedString[i] = arrayAlphabet[shift])
+                break;
+            }
+        }
+    }
+
+    const newArray = cipheredArrayString.join('');
+    return newArray;
+}
+
+
+
