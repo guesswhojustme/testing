@@ -32,5 +32,18 @@ export function reverseString(str){
     return newString;
 }
 
-
+export const calc = {
+    multiply(a, b){
+        return a * b;
+    },
+    add(a, b){
+        return a + b;
+    },
+    subract(a, b){
+        return a - b;
+    },
+    divide(a, b){
+        return a / b;
+    },
+}
 
