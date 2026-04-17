@@ -17,3 +17,20 @@ export function capitalize(str){
     console.log(convertToString);
     return convertToString;
 }
+
+export function reverseString(str){
+    const convertStringToArray = str.split('');
+    const reverseConvertedString = [];
+
+    for(let i = convertStringToArray.length - 1; i >= 0; i--){
+        reverseConvertedString.push(convertStringToArray[i])
+    }
+    const newString = reverseConvertedString.join("");
+    console.log(convertStringToArray);
+    console.log(reverseConvertedString);
+    console.log(newString);
+    return newString;
+}
+
+
+
