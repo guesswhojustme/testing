@@ -47,7 +47,6 @@ export const calc = {
     },
 }
 
-
 export function caeserCipher(str, key){
     const convertedString = str.split('')
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
@@ -75,4 +74,30 @@ export function caeserCipher(str, key){
 }
 
 
+export function analyzeArray(array){
+    const average = () => {
+        const total = array.reduce((prev, cur) => prev + cur, 0)
+        const average = total / array.length;
+        return average;
+    };
 
+    const min = () => {
+        const sort = array.sort((a, b) => a - b)
+        return sort[0];
+    }
+
+    const max = () => {
+        const sort = array.sort((a, b) => b - a);
+        return sort[0];
+    }
+
+    const length = () => array.length;
+
+    const obj = {
+        average: average(),
+        min: min(),
+        max: max(),
+        length: length()
+    }
+    return JSON.stringify(obj)
+}
